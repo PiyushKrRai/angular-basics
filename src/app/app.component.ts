@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css'
+  imports: [RouterOutlet],
+  template: `
+    <h1>Welcome to {{title}}!</h1>
+
+    <router-outlet />
+  `,
+  styles: [],
 })
 export class AppComponent {
-  title = 'temp';
+  title = 'todoapp';
 }
